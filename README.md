@@ -9,3 +9,9 @@ To compile this code you should have GCC installed in your system.
 To run simply execute the binary
 
 > ./executable_name
+
+If your system has make installed then the code can be compiled via simple make command.
+
+> make
+
+The execution instructions remain same.
