@@ -1,20 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "data.h"
 
-int main()
+void read_data(char **data)
 {
+    *data = malloc(sizeof(char)*1000);
     FILE *fp = fopen("CPU_BURST.txt", "r");
-    char c[1000];
-
     if (fp == NULL)
     {
         printf("Error! opening file");
         exit(1);         
     }
-
-    fscanf(fp,"%[^\n]", c);
-    fclose(fp);
-    
-    return 0;
+    fscanf(fp,"%[^\n]", *data);
+    fclose(fp);    
 }
